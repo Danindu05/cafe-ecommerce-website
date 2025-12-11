@@ -1,0 +1,128 @@
+/* Main page styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #DFE6DA;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background: url('../Assets/image sos.jpeg') no-repeat center center;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 40px;
+    min-height: 200px;
+}
+
+h1 {
+    color: #DFE6DA;
+    text-align: center;
+    font-size: clamp(30px, 5vw, 50px);
+}
+
+.container {
+    max-width: 800px;
+    width: 90%;
+    margin: auto;
+    padding: 20px;
+    background-color: #DFE6DA;
+}
+
+.about-sections {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.section {
+    flex: 1;
+    min-width: 280px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+    color: #8c5c2f;
+    font-size: clamp(20px, 4vw, 24px);
+}
+
+.section p {
+    color: black;
+    font-size: clamp(14px, 3vw, 16px);
+    line-height: 1.6;
+}
+
+/* Carousel styling */
+.carousel {
+    height: auto;
+    max-width: 90%;
+    width: 100%;
+    margin: 30px auto;
+    position: relative;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel img {
+    width: 100%;
+    height: auto;
+    max-height: 90vh;
+    object-fit: cover;
+}
+
+.carousel .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: clamp(18px, 4vw, 24px);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    padding: clamp(8px, 2vw, 10px);
+    cursor: pointer;
+    z-index: 2;
+}
+
+.carousel .arrow.left {
+    left: 5%;
+}
+
+.carousel .arrow.right {
+    right: 5%;
+}
+
+@media screen and (max-width: 768px) {
+    .about-sections {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .section {
+        min-width: auto;
+    }
+    
+    .carousel {
+        max-width: 95%;
+    }
+    
+    .carousel .arrow {
+        padding: 8px;
+    }
+    
+    .carousel .arrow.left {
+        left: 10px;
+    }
+    
+    .carousel .arrow.right {
+        right: 10px;
+    }
+}
